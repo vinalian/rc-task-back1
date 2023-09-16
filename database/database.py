@@ -19,6 +19,7 @@ db_name = environ.get('DB_NAME')
 
 class Project:
     def __init__(self):
+        # psycopg2 connection (SQL)
         with connect(host=host, port=port, user=user, password=password, dbname=db_name) as self.db:
             self.cur = self.db.cursor()
 
@@ -49,6 +50,7 @@ class Project:
         :return: true if successful, false otherwise false
         """
         try:
+            # sqlalchemy connection (ORM)
             engine = create_engine(
                 f"postgresql://{user}:{password}@{host}:{port}/{db_name}"
             )
