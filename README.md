@@ -6,10 +6,10 @@
 3. Заполнить .env файл
    
 Windows:
-4. python3 -m venv venv \n
-venv/scripts/activate \n
-5. pip install -r req.txt \n 
-6. python3 run.py \n
+4. python3 -m venv venv
+venv/scripts/activate
+5. pip install -r req.txt
+6. python3 run.py
    
 Linux:
 4. virtualenv env
